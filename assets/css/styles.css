@@ -660,7 +660,7 @@ h3 {
 }
 .about-logo {
   display: block;
-  margin: 0 auto 24px auto;
-  width: 80px;
+  margin: 0 auto;
+  width: auto;
   height: auto;
 }
