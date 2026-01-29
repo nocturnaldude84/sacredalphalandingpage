@@ -1,0 +1,660 @@
+/* CSS reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased; /* remove webkit styles */
+}
+
+:root {
+    --background-color: #FAE5CE; /* define primary color variable */
+    --highlight-color: #ff5f33;
+    --font-color: #3b3b3b;
+    --card-color: #f7e5d1;
+    --headline-color: #7a5e40;
+    --light-beige: #fcd3a3;
+    --light-ochre: #f5cb82;
+    --medium-ochre: #e3b66a;
+    --input-field: #fff; 
+  }  
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Nav bar */
+header {
+    height: 100px;
+}
+
+/* Background colour  */
+body {
+    background-color: var(--background-color);
+}
+
+/* div container styles  */
+.container {
+    width: min(80%, 1440px); /* width will be 80% or 1440px max */
+    margin: auto; /* center container */
+    min-height: 100vh; 
+    position: relative; /* needed to position footer at bottom of page */
+}
+
+.content-wrap {
+    padding-bottom: 150px; /* footer height */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'PT Serif', serif;
+    font-weight: bold;
+    border-bottom: 1px solid var(--headline-color);
+}
+
+/* bliss logo top left nav bar  */
+.logo {
+    font-size: 48px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--headline-color);
+}
+
+/* style for nav links list  */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+/* styles for individual list items  */
+.nav-link {
+    margin: 0 0 0 60px;
+    font-size: 24px;
+}
+
+/* styles for active page highlight in nav bar */
+.active-page {
+    text-decoration: underline;
+    text-decoration-color: var(--headline-color);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+/* remove nav link text decoration  */
+nav a {
+    text-decoration: none;
+    color: var(--headline-color);
+}
+
+/* landing content formatting  */
+main {
+    margin: 0 0 75px 0; /* bottom margin for space at end of context */
+}
+
+/* landing h1 style  */
+h1 {
+    font-size: 48px;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--headline-color);
+    font-family: 'PT Serif', serif;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 125px 0; /* margin to give space at top/btm of landing content */
+}
+
+/* landing paragraph styling  */
+.landing-paragraph {
+    font-size: 20px;
+    font-family: 'PT Sans', sans-serif;
+    max-width: 100%;
+}
+
+/* positioning for landing text - h1 and paragraph */
+.landing-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 80%;
+}
+
+/* decorative line break */
+.line-break {
+    width: 40px;
+    height: 4px;
+    background-color: #7A5E40;
+    border: none;
+    border-radius: 2px;
+    margin: 20px 0 25px 0;
+}
+
+/* primary CTA button */
+.primary-cta {
+    background-color: var(--highlight-color);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 22.5px;
+    height: 45px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* enlarge CTA button on hover */
+}
+
+.primary-cta:hover {
+    transform: scale(1.05); /* enlarge CTA button on hover */
+}
+
+/* secondary CTA button */
+.secondary-cta {
+    background-color: var(--background-color);
+    color: var(--headline-color);
+    border: 1px solid var(--headline-color);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 22.5px;
+    height: 45px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* enlarge CTA button on hover */
+}
+
+.secondary-cta:hover {
+    transform: scale(1.05); /* enlarge CTA button on hover */
+}
+
+/* style for "Get started" primary CTA */
+.get-started {
+    width: 165px;
+    margin-top: 20px;
+}
+
+/* style for "Learn more" secondary CTA */
+.learn-more {
+    width: 165px;
+    margin: 20px 0 0 10px;
+    font-weight: normal;
+
+}
+
+.landing-cta-wrapper {
+    display: flex;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--headline-color);
+    font-family: 'PT Serif', serif;
+    text-align: center;
+}
+
+/* decorative line break */
+.h2-line-break {
+    margin: 20px auto 35px; /* spacing above/below line break */
+}
+
+/* card for main content on home/about */
+.why-bliss-card {
+    background-color: var(--card-color);
+    height: 525px;
+    border-radius: 45px;
+    border: none;
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.25);
+    display: flex;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 24px;
+    color: var(--font-color);
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 50px;
+}
+
+.why-bliss-card img {
+    max-width: 50%; /* width of images on card */
+}
+
+.why-bliss-paragraph {
+    margin: 0 20px;
+}
+
+/* decorative line joining cards */
+.dotted-line {
+    width: 170px;
+    border: none;
+    border-top: 5px dotted var(--headline-color);
+    transform: rotate(90deg);
+    margin: 85px auto; /* controls vertical spacing between cards */
+}
+
+/* decorative line break above newsletter */
+.newsletter-line-break {
+    margin: 50px auto 35px;
+}
+
+/* text above newsletter input */
+.newsletter-container .landing-paragraph {
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+/* style for input and button in newsletter */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+}
+
+/* styles for text input fields */
+.text-field {
+    color: #707070;
+    background-color: var(--input-field);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 22.5px;
+    height: 45px;
+    border: none;
+    padding-left: 22.5px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+
+}
+
+/* email input field for newsletter */
+.newsletter-email {
+    width: 325px;
+}
+
+/* CTA for newsletter submit */
+.newsletter-cta {
+    width: 150px;
+    margin-left: 10px;
+    -webkit-appearance: none;
+}
+
+/* footer social link */
+.social-link-button {
+    width: 40px;
+}
+
+/* adds spacing either side of center social link */
+.footer-social-link:nth-child(2) {
+    margin: 0 20px;
+}
+
+
+.page-footer {
+    border-top: 1px solid var(--headline-color);
+    height: 100px; /* controls footer height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    position: absolute; /* needed to keep footer at btm of page */
+    width: 100%;
+    bottom: 0; /* needed to keep footer at btm of page */
+}
+
+/* styles for graphic in landing/intro */
+.landing-graphic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-graphic img {
+    width: 90%; /* controls img width in intro section */
+}
+
+.landing-intro {
+    flex: 1;
+}
+
+.contact-form-container {
+    margin-top: 20px;
+}
+
+/* flex container for contact form inputs */
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.contact-name-email {
+    flex: 1; /* makes name and email contact form inputs equal width */
+}
+
+.contact-paragraph {
+    width: 100%;
+    margin: 10px 0;
+    height: 250px;
+}
+
+/* styles for contact form textarea input */
+textarea {
+    color: #707070;
+    opacity: 1;
+    font-family: 'PT Sans', sans-serif;
+    padding: 22.5px;
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 32px;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--headline-color);
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    margin: 60px auto 0;
+}
+
+/* style for top left nav logo */
+.logo a {
+    text-decoration: none;
+    color: var(--headline-color);
+}
+
+/* cta style for the contact form */
+.contact-cta {
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+.landing-intro {
+    display: flex;
+    flex-direction: column;
+}
+
+/* container for each category of exercises */
+.exercises-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* exercise cards on exercises page */
+.exercise-card {
+    border-radius: 20px;
+    overflow: hidden;
+    flex: 1 1;
+    box-shadow: 3px 3px 12px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--card-color);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.exercise-card:hover {
+    transform: scale(1.03); /* make card bigger on hover */
+
+}
+
+/* hero image for each exercise card */
+.exercise-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/* dark overlay to make text on exercise card readable */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    color: #fff;
+}
+
+/* text inside exercise cards */
+.exercise-card-paragraph {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+/* target top group of exercises and provide margin below for spacing */
+.exercises-group:nth-of-type(2) {
+    margin-bottom: 60px;
+}
+
+/* embedded video on exercises page */
+.exercise-video {
+    min-width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+/* btn to bring users back to exercises page */
+.exercise-back-btn {
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    margin: 30px 0;
+    display: inline-block;
+    color: var(--headline-color);
+    font-size: 18px;
+}
+
+/* container for exercise content, video + description */
+.exercise-content {
+    margin: 0;
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 10px 10px;
+}
+
+/* text description under exercise video */
+.exercise-content-description {
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+/* MEDIA QUERIES */
+
+/* 1200px */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 38px;
+    }
+
+    .landing-paragraph {
+        font-size: 16px;
+    }
+}
+
+/* 1024px */
+@media (max-width: 1024px) {
+    .why-bliss-card {
+        font-size: 18px;
+    }
+
+    .exercise-card-paragraph {
+        font-size: 18px;
+    }
+}
+
+/* 955 px */
+@media (max-width: 955px) {
+
+    body {
+        text-align: center;
+    }
+
+    .intro {
+        flex-direction: column;
+    }
+
+    .line-break {
+        margin: 20px auto 25px;
+    }
+
+    .landing-cta-wrapper {
+        justify-content: center;
+    }
+
+    main {
+        margin: 75px 0;
+    }
+
+    .landing-graphic img {
+        width: 70%;
+        margin-top: 40px;
+
+    }
+
+    .nav-link {
+        margin: 0 0 0 30px;
+        font-size: 20px;
+    }
+
+    .landing-intro {
+        align-items: center;
+    }
+
+    .landing-text {
+        max-width: 90%;
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+
+    main {
+        margin: 50px 0;
+    }
+
+    .landing-graphic img {
+        width: 70%;
+        margin-top: 40px;
+
+    }
+
+    .nav-link {
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .why-bliss-card {
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.25);
+        flex-direction: column;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .why-bliss-card img {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .why-bliss-card:nth-of-type(2) {
+        flex-direction: column-reverse;
+    }
+
+    .dotted-line {
+        width: 100px;
+        border-top: 5px dotted var(--headline-color);
+        transform: rotate(90deg);
+        margin: 50px auto;
+
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .newsletter-container .landing-paragraph {
+
+        width: 90%;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-email {
+        width: 100%;
+        max-width: 325px;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-cta {
+        margin: 0;
+    }
+
+    .exercises-container {
+        flex-direction: column;
+    }
+
+    .contact-name-email {
+        flex-basis: 100%; /* make inputs full width at 768px and below */
+    }
+}
+
+/* 625px */
+@media (max-width: 625px) {
+    
+    /* stacks landing content vertically on smaller screens */
+    .landing-cta-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .learn-more {
+        margin-left: 0; /* removes left margin from cta when stacked on smaller screens */
+    }
+}
+
+/* 390px */
+@media (max-width: 390px) {
+    
+    /* resize nav elements on smaller screens */
+    .nav-link {
+        margin: 4px;
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+}
