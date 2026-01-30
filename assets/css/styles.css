@@ -7,10 +7,10 @@
 }
 
 :root {
-    --background-color: #FAE5CE; /* define primary color variable */
+    --background-color: #ffffff; /* define primary color variable */
     --highlight-color: #ff5f33;
     --font-color: #3b3b3b;
-    --card-color: #f7e5d1;
+    --card-color: #ffffff;
     --headline-color: #7a5e40;
     --light-beige: #fcd3a3;
     --light-ochre: #f5cb82;
