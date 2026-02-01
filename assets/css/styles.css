@@ -302,8 +302,6 @@ h2 {
 .social-link-button {
     width: 40px;
     height: 40px;
-    object-fit: contain;
-    display: block;
 }
 
 /* adds spacing either side of center social link */
