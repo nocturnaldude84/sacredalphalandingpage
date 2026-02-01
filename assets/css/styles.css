@@ -314,14 +314,15 @@ h2 {
 
 .page-footer {
     border-top: 1px solid var(--headline-color);
-    height: 100px; /* controls footer height */
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 25px;
     margin-top: 50px;
-    position: absolute; /* needed to keep footer at btm of page */
+    position: absolute;
     width: 100%;
-    bottom: 0; /* needed to keep footer at btm of page */
+    bottom: 0;
 }
 
 /* styles for graphic in landing/intro */
