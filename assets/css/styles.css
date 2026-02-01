@@ -106,7 +106,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 125px 0; /* margin to give space at top/btm of landing content */
+    margin: 40px 0; /* margin to give space at top/btm of landing content */
 }
 
 /* landing paragraph styling  */
