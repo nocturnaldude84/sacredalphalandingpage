@@ -24,7 +24,8 @@ html {
 
 /* Nav bar */
 header {
-    height: 100px;
+  height: auto;
+  padding: 16px 0;
 }
 
 /* Background colour  */
