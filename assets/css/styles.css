@@ -834,3 +834,7 @@ h3 {
   flex:1;
   max-width:640px;
 }
+.logo{
+  text-decoration:none;
+  color:inherit;
+}
