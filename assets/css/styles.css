@@ -812,3 +812,11 @@ h3 {
   border:0;
   display:block;
 }
+.hero-brand{
+    margin-bottom:20px;
+}
+
+.hero-brand img{
+    width:220px;
+    height:auto;
+}
