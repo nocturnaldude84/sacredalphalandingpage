@@ -796,3 +796,16 @@ h3 {
   font-size:36px;
   margin-left:12px;
 }
+.hero-video{
+  background:#ffffff;
+  padding:16px;
+  border-radius:18px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.12);
+  max-width:640px;
+}
+
+.hero-video iframe{
+  width:100%;
+  height:360px;
+  border-radius:12px;
+}
