@@ -392,11 +392,6 @@ h3 {
     -webkit-appearance: none;
 }
 
-.landing-intro {
-    display: flex;
-    flex-direction: column;
-}
-
 /* container for each category of exercises */
 .exercises-container {
     display: flex;
