@@ -731,4 +731,17 @@ h3 {
     text-decoration: none;
     font-weight: bold;
 }
+.blog-preview h2 a{
+text-decoration:none;
+color:var(--headline-color);
+}
 
+.blog-preview h2 a:hover{
+text-decoration:underline;
+}
+
+.read-more{
+text-decoration:none;
+color:var(--highlight-color);
+font-weight:bold;
+}
