@@ -745,3 +745,6 @@ text-decoration:none;
 color:var(--highlight-color);
 font-weight:bold;
 }
+.blog-preview{
+margin-bottom:50px;
+}
