@@ -824,7 +824,19 @@ h3 {
 .landing-text{
   flex:1;
 }
+.hero-heading{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
 
+.hero-brand{
+  margin:0;
+}
+
+.hero-brand img{
+  width:120px;
+}
 .hero-video{
   flex:1;
   max-width:640px;
