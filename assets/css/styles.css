@@ -813,10 +813,11 @@ h3 {
   display:block;
 }
 .hero-brand{
-    margin-bottom:20px;
+  text-align:center;
+  margin:40px 0 30px 0;
 }
 
 .hero-brand img{
-    width:220px;
-    height:auto;
+  width:180px;
+  height:auto;
 }
