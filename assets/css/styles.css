@@ -821,3 +821,16 @@ h3 {
   width:180px;
   height:auto;
 }
+.landing-intro{
+  display:flex;
+  align-items:flex-start;
+  gap:60px;
+}
+.landing-text{
+  flex:1;
+}
+
+.hero-video{
+  flex:1;
+  max-width:640px;
+}
