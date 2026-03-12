@@ -1316,12 +1316,10 @@ textarea { height: 160px; resize: vertical; line-height: 1.7; }
   .scroll-cue { display: none; }
   footer.page-footer { padding: 24px 20px; flex-direction: column; align-items: center; text-align: center; }
 }
+
 .embed-frame {
   width: 100%;
   max-width: 100%;
-}
-.embed-frame {
-  width: 100%;
   overflow: hidden;
 }
 
