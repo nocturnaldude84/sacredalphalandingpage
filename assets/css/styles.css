@@ -1314,12 +1314,6 @@ textarea { height: 160px; resize: vertical; line-height: 1.7; }
   footer.page-footer { padding: 24px 20px; flex-direction: column; align-items: center; text-align: center; }
 }
 
-.embed-frame {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-}
-
 .player-container {
   width: 100%;
   max-width: 1200px;   /* adjust this */
