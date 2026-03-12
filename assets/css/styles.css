@@ -1322,9 +1322,3 @@ textarea { height: 160px; resize: vertical; line-height: 1.7; }
   max-width: 100%;
   overflow: hidden;
 }
-
-.embed-frame iframe {
-  width: 260px !important;
-  transform: scale(2.5);
-  transform-origin: left top;
-}
