@@ -1320,3 +1320,13 @@ textarea { height: 160px; resize: vertical; line-height: 1.7; }
   width: 100%;
   max-width: 100%;
 }
+.embed-frame {
+  width: 100%;
+  overflow: hidden;
+}
+
+.embed-frame iframe {
+  width: 260px !important;
+  transform: scaleX(2.5);
+  transform-origin: left top;
+}
