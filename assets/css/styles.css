@@ -1322,3 +1322,10 @@ textarea { height: 160px; resize: vertical; line-height: 1.7; }
   max-width: 100%;
   overflow: hidden;
 }
+
+.player-container {
+  width: 100%;
+  max-width: 900px;   /* adjust this */
+  margin: 0 auto;
+}
+
