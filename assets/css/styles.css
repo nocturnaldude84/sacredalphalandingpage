@@ -1331,18 +1331,16 @@ textarea { height: 160px; resize: vertical; line-height: 1.7; }
   width: 280px;
   height: auto;
 }
-.practice-steps li p,
-.practice-steps .step-body {
-  word-break: normal;
-  overflow-wrap: normal;
-  white-space: normal;
+.practice-steps li {
+  min-width: 0;
 }
 
-.benefit-list li {
-  display: flex;
-  flex-wrap: nowrap;
+.practice-steps .step-body {
+  min-width: 0;
+  display: block;
 }
 
 .benefit-list li strong {
-  white-space: nowrap;
+  display: inline;
+  white-space: normal;
 }
