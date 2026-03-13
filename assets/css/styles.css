@@ -1340,8 +1340,6 @@ textarea { height: 160px; resize: vertical; line-height: 1.7; }
 
 .benefit-list li {
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
   flex-wrap: nowrap;
 }
 
