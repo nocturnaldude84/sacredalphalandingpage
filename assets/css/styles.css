@@ -1331,16 +1331,22 @@ textarea { height: 160px; resize: vertical; line-height: 1.7; }
   width: 280px;
   height: auto;
 }
+
 .practice-steps li {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 20px;
   min-width: 0;
 }
 
-.practice-steps .step-body {
+.practice-steps li .step-body,
+.practice-steps li p {
+  grid-column: 2;
   min-width: 0;
-  display: block;
+  width: 100%;
 }
 
-.benefit-list li strong {
-  display: inline;
-  white-space: normal;
+.practice-steps li .step-title {
+  grid-column: 2;
+  min-width: 0;
 }
