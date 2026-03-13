@@ -1331,3 +1331,20 @@ textarea { height: 160px; resize: vertical; line-height: 1.7; }
   width: 280px;
   height: auto;
 }
+.practice-steps li p,
+.practice-steps .step-body {
+  word-break: normal;
+  overflow-wrap: normal;
+  white-space: normal;
+}
+
+.benefit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex-wrap: nowrap;
+}
+
+.benefit-list li strong {
+  white-space: nowrap;
+}
