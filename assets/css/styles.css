@@ -386,7 +386,7 @@ footer.page-footer {
 .footer-social-links { display: flex; gap: 20px; align-items: center; }
 .footer-social-link img.social-link-button {
   width: 22px; height: 22px;
-  opacity: 0.38;
+  opacity: 0.8;
   transition: opacity 0.2s;
 }
 .footer-social-link:hover img.social-link-button { opacity: 0.9; }
