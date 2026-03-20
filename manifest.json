@@ -1,0 +1,22 @@
+{
+  "name": "Sacred Alpha",
+  "short_name": "Sacred Alpha",
+  "description": "Guided meditation, breathwork, and mindfulness built for men.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0b09",
+  "theme_color": "#0c0b09",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/img/favicon-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/illustration-1.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
