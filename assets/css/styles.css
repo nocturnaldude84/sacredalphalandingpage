@@ -485,6 +485,7 @@ footer.page-footer {
 .hero-video-wrap { position: relative; }
 .hero-video-frame {
   position: relative;
+  max-width: 760px; 
   border: 1px solid rgba(212,168,67,0.2);
   background: var(--stone);
   overflow: hidden;
