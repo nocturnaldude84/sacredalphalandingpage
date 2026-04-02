@@ -288,8 +288,8 @@
     for (var i = 0; i < particles.length; i++) {
       var p = particles[i];
       var g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-      g.addColorStop(0,    'rgba(184,130,30,' + p.opacity + ')');
-      g.addColorStop(0.45, 'rgba(140,100,28,' + (p.opacity * 0.38) + ')');
+      g.addColorStop(0,    'rgba(255,200,80,' + p.opacity + ')');
+      g.addColorStop(0.45, 'rgba(200,150,50,' + (p.opacity * 0.5) + ')');
       g.addColorStop(1,    'rgba(80,60,20,0)');
       ctx.beginPath();
       ctx.fillStyle = g;
