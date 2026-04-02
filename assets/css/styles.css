@@ -59,7 +59,7 @@ img { display: block; max-width: 100%; }
   z-index: 1;
   pointer-events: none;
   opacity: 1;
-  mix-blend-mode: screen;
+  mix-blend-mode: overlay;
 }
 
 /* ── NAV ── */
