@@ -50,6 +50,11 @@
 </header>
 
 <!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <canvas class="hero-mist" id="heroMist" aria-hidden="true"></canvas>
+  <div class="hero-line-v"></div>
+
   <div class="hero-grid">
 
     <!-- Left: Text -->
@@ -235,5 +240,89 @@
 
     <p class="footer-copy">sacredalpha.official@gmail.com &nbsp;|&nbsp; © 2026 Sacred Alpha &nbsp;|&nbsp; <a href="https://sacredalpha.com/privacy-policy.html" style="color: inherit;">Privacy Policy</a></p>
   </footer> 
+
+<script>
+(function () {
+  var canvas = document.getElementById('heroMist');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+
+  function resize() {
+    var hero = canvas.parentElement;
+    canvas.width  = hero.offsetWidth;
+    canvas.height = hero.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function rand(a, b) { return Math.random() * (b - a) + a; }
+
+  function mkParticle() {
+    return {
+      x:             rand(0, canvas.width),
+      y:             rand(0, canvas.height),
+      r:             rand(140, 300),
+      opacity:       0,
+      targetOpacity: rand(0.28, 0.5),
+      vx:            rand(-0.1, 0.1),
+      vy:            rand(-0.055, 0.055),
+      fadeIn:        rand(0.0007, 0.0018),
+      fadeOut:       rand(0.0005, 0.0012),
+      hold:          0,
+      phase:         'in'
+    };
+  }
+
+  var particles = [];
+  for (var i = 0; i < 8; i++) {
+    var p = mkParticle();
+    p.opacity = rand(0, p.targetOpacity);
+    p.phase   = 'hold';
+    p.hold    = rand(100, 400);
+    particles.push(p);
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+      var g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      g.addColorStop(0,    'rgba(255,200,80,' + p.opacity + ')');
+      g.addColorStop(0.45, 'rgba(200,150,50,' + (p.opacity * 0.5) + ')');
+      g.addColorStop(1,    'rgba(80,60,20,0)');
+      ctx.beginPath();
+      ctx.fillStyle = g;
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < -p.r) p.x = canvas.width  + p.r;
+      if (p.x > canvas.width  + p.r) p.x = -p.r;
+      if (p.y < -p.r) p.y = canvas.height + p.r;
+      if (p.y > canvas.height + p.r) p.y = -p.r;
+
+      if (p.phase === 'in') {
+        p.opacity += p.fadeIn;
+        if (p.opacity >= p.targetOpacity) { p.phase = 'hold'; p.hold = rand(180, 480); }
+      } else if (p.phase === 'hold') {
+        p.hold--;
+        if (p.hold <= 0) p.phase = 'out';
+      } else {
+        p.opacity -= p.fadeOut;
+        if (p.opacity <= 0) {
+          var np = mkParticle();
+          for (var k in np) p[k] = np[k];
+        }
+      }
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  tick();
+})();
+</script>
 </body>
 </html>
